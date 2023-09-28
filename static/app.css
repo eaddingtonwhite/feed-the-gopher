@@ -1,0 +1,135 @@
+#input {
+    height: 40px;
+    max-width: 600px
+}
+
+div#chat-messages {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    word-break: break-all;
+}
+
+#name-input {
+    padding-bottom: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#chat-messages {
+    overflow-y: scroll;
+}
+
+#chat-messages .message {
+    line-height: 20px;
+    display: flex;
+}
+
+.flex-container {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+.reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.left-chat-side-bar {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 30%;
+}
+
+.main-game-screen-right {
+    background-color: white;
+    padding-bottom: 10px;
+    flex: 70%;
+}
+
+.board-screen-left {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-bottom: 10px;
+    flex: 70%;
+}
+
+.board-screen-right {
+    background-color: lightskyblue;
+    padding: 10px;
+    flex: 30%;
+}
+
+.page-container {
+    margin: 10px;
+    display: block;
+}
+
+#game-btn {
+    height: 400px;
+    width: 400px;
+    background: white;
+    border: none;
+}
+
+#messageBar {
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid grey;
+
+    padding: 1px;
+}
+
+input {
+    flex-grow: 2;
+    padding: 2px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+form:focus-within {
+    outline: 1px solid blue
+}
+
+button {
+    border: 1px solid grey;
+    background: grey;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.auto-feeder-btn {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    border-radius: 10px;
+    background: white;
+
+}
+
+.btn-container {
+    display: flex;
+}

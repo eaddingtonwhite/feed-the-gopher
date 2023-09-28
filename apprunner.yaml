@@ -1,0 +1,12 @@
+version: 1.0
+runtime: go1
+build:
+  commands:
+    build:
+      - go build pkg/api/main.go
+run:
+  secrets:
+    - name: MOMENTO_API_KEY
+      value-from: arn:aws:secretsmanager:us-west-2:123456789:secret:momento_api_key
+  command: ./main
+

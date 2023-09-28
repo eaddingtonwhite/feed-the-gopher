@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feed the acorn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/app.css">
+</head>
+<body>
+<div class="page-container">
+    <div class="flex-container reverse">
+        <div class="left-chat-side-bar">
+            <div>
+                <div id="name-input">
+                    Welcome: <span id="name"></span>
+                </div>
+                <div id="chat-messages"></div>
+            </div>
+            <div id="messageBar">
+                <input id="chat-input" type="text" maxlength="20"/>
+                <button onclick="send()">Send</button>
+            </div>
+        </div>
+        <div class="main-game-screen-right">
+            <div class="flex-container">
+                <div class="board-screen-left center">
+                    <h1>Feed the gopher</h1>
+                    <button id="game-btn" onclick="registerBtnHit()">
+                        <img width="400px" src="/static/gopher.png" alt="gopher-to-feed"/>
+                    </button>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Upgrade</th>
+                            <th>Cost</th>
+                            <th>Income</th>
+                            <th>Buy</th>
+                            <th>Number Owned</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Carrot Auto Feeder</td>
+                            <td>100</td>
+                            <td>5/min</td>
+                            <td>
+                                <button class="buy-button" onclick="buildAutoFeederBtnHit(1)">Buy</button>
+                            </td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Sunflower Seed Auto Feeder</td>
+                            <td>10000</td>
+                            <td>50/min</td>
+                            <td>
+                                <button class="buy-button" onclick="buildAutoFeederBtnHit(2)">Buy</button>
+                            </td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Golden Radish Auto Feeder</td>
+                            <td>1000000</td>
+                            <td>5000/min</td>
+                            <td>
+                                <button class="buy-button" onclick="buildAutoFeederBtnHit(3)">Buy</button>
+                            </td>
+                            <td>0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div id="score-board" class="board-screen-right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="/static/reconnecting-websocket.min.js"></script>
+<script src="/static/app.js"></script>
+</html>
